@@ -14,7 +14,11 @@ protocol AddAttractionVCDelegate: class {
     func addAttractionVC(_ control: AddAttraction, didFinishEdit attraction: AttractionItem)
 }
 
-class AddAttraction: UITableViewController {
+class AddAttraction: UITableViewController, ChooseProvinceVCDelegate  {
+    func chooseProvince(_ controller: ChooseProvince, didPick provinceIconName: String) {
+        <#code#>
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
