@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol AddAttractionVCDelegate: class {
+    func addAttractionVCDidCancel()
+    func addAttractionVC(_ control: AddAttraction, didFinishAdd attraction: AttractionItem)
+    func addAttractionVC(_ control: AddAttraction, didFinishEdit attraction: AttractionItem)
+}
+
 class AddAttraction: UITableViewController {
 
     override func viewDidLoad() {

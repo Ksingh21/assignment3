@@ -7,6 +7,9 @@
 //
 
 import UIKit
+protocol chooseProvinceVCDelegate: class {
+    func chooseProvince(_ controller: ChooseProvince, didPick provinceIconName: String)
+}
 
 class ChooseProvince: UITableViewController {
 

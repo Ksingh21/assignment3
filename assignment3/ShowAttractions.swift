@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ShowAttractions: UITableViewController {
+class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
+    
+    var datamodel: Datamodel!
+    
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,14 +87,37 @@ class ShowAttractions: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
+  
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "AddAttraction") {
+            let controller = segue.destination as! AddAttraction
+            controller.delegate = self
+        } else if (segue.identifier == "EditAttraction") {
+            let controller = segue.destination as! AddAttraction
+            controller.delegate = self
+            
+            let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+            let 
     }
-    */
+ 
 
+    func addAttractionVCDidCancel() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addAttractionVC(_ control: AddAttraction, didFinishAdd attraction: AttractionItem) {
+        let newRow = datamodel.attraction.count;
+        datamodel.attraction.append(attraction)
+    }
+    
+    func addAttractionVC(_ control: AddAttraction, didFinishEdit attraction: AttractionItem) {
+        <#code#>
+    }
+    
+    
+    
 }
