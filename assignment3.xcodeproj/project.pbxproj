@@ -17,6 +17,8 @@
 		3F21CB2D2033740F0082DB6B /* ShowAttractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB2C2033740F0082DB6B /* ShowAttractions.swift */; };
 		3F21CB2F2033748D0082DB6B /* AddAttraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB2E2033748D0082DB6B /* AddAttraction.swift */; };
 		3F21CB312033749F0082DB6B /* ChooseProvince.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB302033749F0082DB6B /* ChooseProvince.swift */; };
+		3F21CB33203383BB0082DB6B /* AttractionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB32203383BB0082DB6B /* AttractionItem.swift */; };
+		3F21CB35203387AA0082DB6B /* Datamodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB34203387AA0082DB6B /* Datamodel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3F21CB2C2033740F0082DB6B /* ShowAttractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAttractions.swift; sourceTree = "<group>"; };
 		3F21CB2E2033748D0082DB6B /* AddAttraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAttraction.swift; sourceTree = "<group>"; };
 		3F21CB302033749F0082DB6B /* ChooseProvince.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProvince.swift; sourceTree = "<group>"; };
+		3F21CB32203383BB0082DB6B /* AttractionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionItem.swift; sourceTree = "<group>"; };
+		3F21CB34203387AA0082DB6B /* Datamodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datamodel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				3F21CAFE203370890082DB6B /* AppDelegate.swift */,
 				3F21CB00203370890082DB6B /* ViewController.swift */,
 				3F21CB02203370890082DB6B /* Main.storyboard */,
+				3F21CB32203383BB0082DB6B /* AttractionItem.swift */,
+				3F21CB34203387AA0082DB6B /* Datamodel.swift */,
 				3F21CB2C2033740F0082DB6B /* ShowAttractions.swift */,
 				3F21CB2E2033748D0082DB6B /* AddAttraction.swift */,
 				3F21CB302033749F0082DB6B /* ChooseProvince.swift */,
@@ -269,8 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F21CB2F2033748D0082DB6B /* AddAttraction.swift in Sources */,
+				3F21CB33203383BB0082DB6B /* AttractionItem.swift in Sources */,
 				3F21CB01203370890082DB6B /* ViewController.swift in Sources */,
 				3F21CAFF203370890082DB6B /* AppDelegate.swift in Sources */,
+				3F21CB35203387AA0082DB6B /* Datamodel.swift in Sources */,
 				3F21CB2D2033740F0082DB6B /* ShowAttractions.swift in Sources */,
 				3F21CB312033749F0082DB6B /* ChooseProvince.swift in Sources */,
 			);
