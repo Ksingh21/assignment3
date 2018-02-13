@@ -14,6 +14,9 @@
 		3F21CB09203370890082DB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F21CB07203370890082DB6B /* LaunchScreen.storyboard */; };
 		3F21CB14203370890082DB6B /* assignment3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB13203370890082DB6B /* assignment3Tests.swift */; };
 		3F21CB1F203370890082DB6B /* assignment3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB1E203370890082DB6B /* assignment3UITests.swift */; };
+		3F21CB2D2033740F0082DB6B /* ShowAttractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB2C2033740F0082DB6B /* ShowAttractions.swift */; };
+		3F21CB2F2033748D0082DB6B /* AddAttraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB2E2033748D0082DB6B /* AddAttraction.swift */; };
+		3F21CB312033749F0082DB6B /* ChooseProvince.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB302033749F0082DB6B /* ChooseProvince.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		3F21CB1A203370890082DB6B /* assignment3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = assignment3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F21CB1E203370890082DB6B /* assignment3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assignment3UITests.swift; sourceTree = "<group>"; };
 		3F21CB20203370890082DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F21CB2C2033740F0082DB6B /* ShowAttractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAttractions.swift; sourceTree = "<group>"; };
+		3F21CB2E2033748D0082DB6B /* AddAttraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAttraction.swift; sourceTree = "<group>"; };
+		3F21CB302033749F0082DB6B /* ChooseProvince.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProvince.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				3F21CAFE203370890082DB6B /* AppDelegate.swift */,
 				3F21CB00203370890082DB6B /* ViewController.swift */,
 				3F21CB02203370890082DB6B /* Main.storyboard */,
+				3F21CB2C2033740F0082DB6B /* ShowAttractions.swift */,
+				3F21CB2E2033748D0082DB6B /* AddAttraction.swift */,
+				3F21CB302033749F0082DB6B /* ChooseProvince.swift */,
 				3F21CB05203370890082DB6B /* Assets.xcassets */,
 				3F21CB07203370890082DB6B /* LaunchScreen.storyboard */,
 				3F21CB0A203370890082DB6B /* Info.plist */,
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F21CB2F2033748D0082DB6B /* AddAttraction.swift in Sources */,
 				3F21CB01203370890082DB6B /* ViewController.swift in Sources */,
 				3F21CAFF203370890082DB6B /* AppDelegate.swift in Sources */,
+				3F21CB2D2033740F0082DB6B /* ShowAttractions.swift in Sources */,
+				3F21CB312033749F0082DB6B /* ChooseProvince.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
