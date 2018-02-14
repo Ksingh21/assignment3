@@ -2,8 +2,8 @@
 //  assignment3Tests.swift
 //  assignment3Tests
 //
-//  Created by Student on 2018-02-13.
-//  Copyright © 2018 Student. All rights reserved.
+//  Created by Khushwant Singh on 2018-02-13.
+//  Copyright © 2018 Khushwant Singh. All rights reserved.
 //
 
 import XCTest
