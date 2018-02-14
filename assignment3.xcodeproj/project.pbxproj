@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F21CAFF203370890082DB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CAFE203370890082DB6B /* AppDelegate.swift */; };
-		3F21CB01203370890082DB6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21CB00203370890082DB6B /* ViewController.swift */; };
 		3F21CB04203370890082DB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F21CB02203370890082DB6B /* Main.storyboard */; };
 		3F21CB06203370890082DB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F21CB05203370890082DB6B /* Assets.xcassets */; };
 		3F21CB09203370890082DB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F21CB07203370890082DB6B /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		3F21CAFB203370890082DB6B /* assignment3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F21CAFE203370890082DB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F21CB00203370890082DB6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F21CB03203370890082DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F21CB05203370890082DB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F21CB08203370890082DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				3F21CAFE203370890082DB6B /* AppDelegate.swift */,
-				3F21CB00203370890082DB6B /* ViewController.swift */,
 				3F21CB02203370890082DB6B /* Main.storyboard */,
 				3F21CB32203383BB0082DB6B /* AttractionItem.swift */,
 				3F21CB34203387AA0082DB6B /* Datamodel.swift */,
@@ -276,7 +273,6 @@
 			files = (
 				3F21CB2F2033748D0082DB6B /* AddAttraction.swift in Sources */,
 				3F21CB33203383BB0082DB6B /* AttractionItem.swift in Sources */,
-				3F21CB01203370890082DB6B /* ViewController.swift in Sources */,
 				3F21CAFF203370890082DB6B /* AppDelegate.swift in Sources */,
 				3F21CB35203387AA0082DB6B /* Datamodel.swift in Sources */,
 				3F21CB2D2033740F0082DB6B /* ShowAttractions.swift in Sources */,

@@ -15,19 +15,70 @@ protocol AddAttractionVCDelegate: class {
 }
 
 class AddAttraction: UITableViewController, ChooseProvinceVCDelegate  {
-    func chooseProvince(_ controller: ChooseProvince, didPick provinceIconName: String) {
-        <#code#>
+    
+    weak var delegate: AddAttractionVCDelegate?
+    
+    @IBOutlet weak var attractionName: UITextField!
+    
+    
+    @IBOutlet weak var provinceIcon: UIImageView!
+    
+    @IBOutlet weak var cityName: UITextField!
+    
+    
+    @IBOutlet weak var dueDateLabel: UILabel!
+    
+    @IBOutlet weak var datePickerSwitch: UISwitch!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var ratingSlider: UISlider!
+    
+    var attractionToEdit: AttractionItem?
+    var iconName: String?
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        dueDateLabel.text = formatter.string(from: datePicker.date) 
     }
     
-
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        tableView.reloadData()
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        delegate?.addAttractionVCDidCancel()
+    }
+    @IBAction func done(_ sender: UIBarButtonItem) {
+        if let attraction = attractionToEdit {
+            attractionName.text = attractionName.text!
+            if let icon = iconName {
+                attraction.iconName = icon
+            }
+            delegate?.addAttractionVC(self, didFinishEdit: attraction)
+        } else {
+            let text = attractionName.text!
+            let attraction = AttractionItem(attractionName: text, checked: false)
+            if let icon = iconName {
+                attraction.iconName = icon
+            }
+            delegate?.addAttractionVC(self, didFinishAdd: attraction)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let attraction = attractionToEdit {
+            attractionName.text = attraction.attractionName
+            self.title = "Edit Item"
+            iconName = attraction.iconName
+            if let iconName = iconName {
+                provinceIcon.image = UIImage(named: iconName)
+            }
+        } else {
+            title = "Add Item"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,59 +98,20 @@ class AddAttraction: UITableViewController, ChooseProvinceVCDelegate  {
         return 4
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let controller = segue.destination as! ChooseProvince
+        controller.delegate = self
+
     }
-    */
+    
+    func chooseProvince(_ controller: ChooseProvince, didPick iconName: String) {
+        self.iconName = iconName
+        provinceIcon.image = UIImage(named: iconName)
+        navigationController?.popViewController(animated: true)
+    }
 
 }

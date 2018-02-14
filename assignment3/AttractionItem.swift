@@ -10,7 +10,7 @@ import UIKit
 
 class AttractionItem: NSObject, Codable {
     var attractionName = ""
-    var provinceIconName:String = ""
+    var iconName:String = ""
     var checked = false
     
     init(attractionName: String, checked:Bool) {

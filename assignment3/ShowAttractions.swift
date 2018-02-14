@@ -1,3 +1,4 @@
+
 //
 //  ShowAttractions.swift
 //  assignment3
@@ -12,18 +13,15 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
     
     var datamodel: Datamodel!
     
-
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
-
+    
     @IBAction func add(_ sender: UIBarButtonItem) {
         let attraction = AttractionItem(attractionName: "Hatley Castle", checked: true);
         let newRow = datamodel.attraction.count;
@@ -33,17 +31,17 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
     
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return datamodel.attraction.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -54,22 +52,22 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
         let visitedLabel = cell.viewWithTag(1001) as! UILabel
         visitedLabel.text = "√"
         
-        let provinceIconName = datamodel.attraction[indexPath.row].provinceIconName
+        let provinceIconName = datamodel.attraction[indexPath.row].iconName
         let imageView = cell.viewWithTag(1002) as! UIImageView
         imageView.image = UIImage(named:provinceIconName)
         
         return cell
     }
     
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -77,7 +75,7 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
     
@@ -92,26 +90,26 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
             }
         }
     }
-
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
-  
-
+    
+    /*
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
+    /*
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -124,11 +122,11 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
             controller.delegate = self
             
             let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
-            let item = datamodel.attraction[indexPath!.row]
+            let attraction = datamodel.attraction[indexPath!.row]
             controller.attractionToEdit = attraction
+        }
     }
-    }
-
+    
     func addAttractionVCDidCancel() {
         navigationController?.popViewController(animated: true)
     }
@@ -152,10 +150,12 @@ class ShowAttractions: UITableViewController, AddAttractionVCDelegate {
             if let cell = tableView.cellForRow(at: indexPath) {
                 let label = cell.viewWithTag(1000) as! UILabel
                 label.text = attraction.attractionName
-                let provinceIconName = datamodel.attraction[indexPath.row].provinceIconName
+                let provinceIconName = datamodel.attraction[indexPath.row].iconName
                 let imageView = cell.viewWithTag(1002) as! UIImageView
                 imageView.image = UIImage(named:provinceIconName)
+            }
+        }
+        navigationController?.popViewController(animated: true)
+        
     }
-}
-}
 }

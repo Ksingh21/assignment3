@@ -9,7 +9,7 @@
 import UIKit
 
 class Datamodel: NSObject {
-    var attraction: [AttractionItem] = [AttractionItem]()
+   var attraction: [AttractionItem] = [AttractionItem]()
     func documentDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory,
         in: .userDomainMask)
